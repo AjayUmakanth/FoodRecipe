@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Food Tesero</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  </head>
+
+
+  <body  data-offset="60">
+
+
+
+
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header col-sm-4">
+            <a class="navbar-brand" href="home.php">Food Tesoro</a>
+		             </div>
+             <div class="collapse navbar-collapse" id="custom-collapse">
+           <ul class="nav navbar-nav navbar-right">
+              <li><a href="#news">All</a></li>            
+              <li><a href="#news">North Indian</a></li>
+              <li><a href="#contact">South Indian</a></li>
+              <li><a href="#contact">Continental</a></li>
+              <li><a href="#contact">Chinese</a></li>
+              <li style="float:right;background-color:#4CAF50;" ><a href="#about">Upload</a></li>
+            </ul>
+         </div>
+        </div>
+      </nav>
+
+
+
+   <section id="intro" data-speed="6" data-type="background" data-background="image/13.jpg">
+     <div class="container-wrapper">
+     </div>
+   </section>
+
+
+
+
+  <section class="module-extra-small bg-dark align=text-center"><h4 align="center">
+  Upload Your Recepie</h4></section>
+
+<form action="\Food Tesero\upload.php" method="POST" enctype="multipart/form-data">
+
+  <div class="container">
+    <label for="rname"><b>Recepie Name</b></label>
+    <input type="text" placeholder="Enter Recepie Name" id="rname" name="rname" required>
+
+    <label for="ing"><b>Ingredients</b></label>
+    <textarea placeholder="Enter Each Ingredient In New Line" id="ing" name="ing" required></textarea>
+        
+    <label for="dir"><b>Directions</b></label>
+    <textarea placeholder="Enter Each Step in New Line" id="dir" name="dir" required></textarea>
+
+    <input id="nrth" name="nrth" type="checkbox">
+    <label for="nrth"><b>North Indian</b></label><br>
+
+    <input id="soth" name="soth" type="checkbox">
+    <label for="soth"><b>South Indian</b></label><br>
+
+    <input id="chin" name="chin" type="checkbox">
+    <label for="chin"><b>Chinese</b></label><br>
+
+    <input id="cont" name="cont" type="checkbox">
+    <label for="cont"><b>Continental</b></label><br><br>
+
+    <label for="image"><b>Image</b></label>
+    <input id="image" name="image" type="file">
+
+    <button type="submit">Upload</button>
+    <label>
+  </div>
+
+</form>
+
+
+
+      <div class="copyright py-4 text-center text-white module-extra-small bg-dark" >
+        <div class="container">
+         <small>Kobis &copy;  2018</small>
+        </div>
+      </div>
+
+
+</body>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <i class="fa fa-angle-double-up"></i></button>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+  </body>
+</html>

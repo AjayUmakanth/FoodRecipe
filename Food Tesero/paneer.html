@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Food Tesero</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+
+
+
+
+
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header col-sm-4">
+            <a class="navbar-brand" href="home.html">Food Tesero</a>
+             </div>
+             <div class="collapse navbar-collapse" id="custom-collapse">
+           <ul class="nav navbar-nav navbar-right"></ul>
+         </div>
+        </div>
+      </nav>
+
+
+
+   <section id="intro" data-type="background" data-background="image/page-2.jpg" align="center">
+     <div class="container-wrapper2">
+       <div class="recepie-page">
+        <img src="image/paneer-butter-masala.jpg" align="center">
+        <div class="ingredients" align="center">
+          <h3>Ingredients</h3>
+          <ul align="left">
+          <li>250 gms Paneer (or Tofu), cut into 1-inch cubes</li>
+          <li>2 medium Onions, finely chopped</li>
+          <li>1½ teaspoons chopped Ginger</li>
+          <li>3-4 Garlic Cloves</li>
+          <li>3 medium Tomatoes</li>
+          <li>6-8 Cashew Nuts, soaked in water for 15 minutes</li>
+          <li>1 small piece of Bay Leaf</li>
+          <li>2 Green Chillies, slit lengthwise</li>
+          <li>1/2 cup Full Fat Milk</li>
+          <li>2 teaspoons Kasuri Methi (dry fenugreek leaves)</li>
+          <li>1/2 teaspoon Garam Masala Powder</li>
+          <li>1 tablespoon Coriander Powder</li>
+          <li>1 teaspoon or to taste Red Chili Powder</li>
+          <li>2 tablespoons Fresh Cream (or homemade malai)</li>
+          <li>2 tablespoons Butter</li>
+          <li>2 tablespoons Oil</li>
+          <li>Salt to taste</li>
+        </ul>
+          <h3>Directions</h3>
+          <ol align="left">
+            <li>If you are using frozen paneer cubes, then defrost them.</li>
+            <li>Grind onion, ginger and garlic in a grinder and make onion paste. Grind soaked cashew nuts with 2 tablespoons water to make cashew nut paste. Blanch the tomatoes and blend them to prepare tomato puree.</li>
+            <li>Heat cooking oil and butter in a non-stick frying pan over medium flame. Add onion paste and bay leaf and sauté until onion paste turns light brown for approx. 4-5 minutes.</li>
+            <li>Add green chilli and red chili powder and sauté for 30-40 seconds. Add cashew nut paste.</li>
+            <li>Stir and cook for 2-minutes.</li>
+            <li>Add tomato puree and cook until oil starts to separate from the puree, it will take around 3-4 minutes.</li>
+            <li>Add coriander powder and garam masala powder and mix well.</li>
+            <li>Add 1/2 cup milk, 1/2 cup water and salt; mix and cook until oil comes on the surface or for approx. 4-5 minutes.</li>
+            <li>Add paneer cubes, kasuri methi and cook for approx 2-minutes or until you get the desired consistency of gravy.</li>
+            <li>Add fresh cream.</li>
+            <li>Mix properly and turn off the flame.</li>
+            <li>Transfer prepared curry to a serving bowl. Garnish Punjabi paneer butter masala with milk cream or cube of butter and serve.</li>
+          </ol>
+        </div>
+      </div>
+     </div>
+
+   </section>
+      <div class="copyright py-4 text-center text-white module-extra-small bg-dark" >
+        <div class="container">
+         <small>Kobis &copy;  2018</small>
+        </div>
+      </div>
+
+
+</body>
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Food Tesero</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+
+
+
+
+
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header col-sm-4">
+            <a class="navbar-brand" href="home.php">Food Tesero</a>
+             </div>
+             <div class="collapse navbar-collapse" id="custom-collapse">
+           <ul class="nav navbar-nav navbar-right"></ul>
+         </div>
+        </div>
+      </nav>
+
+
+   <section id="intro" data-type="background" data-background="image/page-2.jpg" align="center">
+     <div class="container-wrapper2">
+       <div class="recepie-page">
+        <?php
+         $dbhost = 'localhost';
+            $dbuser = 'root';
+            $dbpass = '';
+            $db='ajay';
+            $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$db);
+            
+            if(! $conn ) {
+               die('Could not connect: ' . mysql_error());
+            }
+            $sql = "SELECT * FROM food";
+            $result = $conn->query($sql);
+            $result = $result->fetch_array();
+
+//echo $result;
+echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['image'] ).'"/>';
+  echo '<div class="ingredients" align="center">';
+  echo '<h3>Ingredients</h3>';
+  echo '<ul align="left">';
+  $ingredients = explode("\n",$result['ingredients']);
+  foreach($ingredients as $ing)
+  {
+      echo '<li>'.trim($ing)."</li>\n";
+  }
+  echo '</ul>';
+  echo '<h3>Directions</h3>';
+  echo '<ol align="left">';
+  $directions = explode("\n",$result['directions']);
+  foreach($directions as $dir) 
+  {
+     echo '<li>'.trim($dir)."</li>\n";
+  }
+  echo '</ol>';
+  echo '</div>';
+?>
+      </div>
+     </div>
+   </section>
+      <div class="copyright py-4 text-center text-white module-extra-small bg-dark" >
+        <div class="container">
+         <small>Kobis &copy;  2018</small>
+        </div>
+      </div>
+
+
+</body>
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+  </body>
+</html>

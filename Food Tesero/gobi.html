@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Food Tesero</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header col-sm-4">
+            <a class="navbar-brand" href="home.html">Food Tesero</a>
+             </div>
+             <div class="collapse navbar-collapse" id="custom-collapse">
+           <ul class="nav navbar-nav navbar-right"></ul>
+         </div>
+        </div>
+      </nav>
+   <section id="intro" data-type="background" data-background="image/page-2.jpg" align="center">
+     <div class="container-wrapper2">
+       <div class="recepie-page">
+        <img src="image/gobi.jpg" align="center">
+        <div class="ingredients" align="center">
+          <h3>Ingredients</h3>
+          <ul align="left">
+          <li>Boneless Chicken Thighs - 500 grams</li>
+          <li>Garlic - 2 tblspn</li>
+          <li>Ginger - 2 tblspn</li>
+          <li>Curry leaves a handful</li>
+          <li>Kashmiri Chilli Powder - 2 tblspn</li>
+          <li>Cumin Powder - 2 tsp</li>
+          <li>Coriander Powder - 1 tblspb</li>
+          <li>Turmeric Powder - 1 tsp</li>
+          <li>Garam Masala Powder - 2 tsp</li>
+          <li>Pepper Powder - 1 tsp</li>
+          <li>Lemon Juice / Vinegar - 4 tblsp</li>
+          <li>All Purpose flour / Maida - 4 tblspn</li>
+          <li>Rice Flour - 4 tblspn</li>
+          <li>Red Food Colour a pinch</li>
+          <li>Oil for deep frying</li>
+        </ul>
+          <h3>Directions</h3>
+          <ol align="left">
+          <li>Soak 300g basmati rice in warm water, then wash in cold until the water runs clear.</li>
+          <li>Heat 25g butter in a saucepan and cook 1 finely sliced large onion with 1 bay leaf, 3 cardamom pods and 1 small cinnamon stick for 10 mins.</li>
+          <li>Sprinkle in 1 tsp turmeric, then add 4 chicken breasts, cut into large chunks, and 4 tbsp curry paste. Cook until aromatic.</li>
+          <li>Stir the rice into the pan with 85g raisins, then pour over 850ml chicken stock.</li>
+          <li>Place a tight-fitting lid on the pan and bring to a hard boil, then lower the heat to a minimum and cook the rice for another 5 mins.</li>
+          <li>Turn off the heat and leave for 10 mins. Stir well, mixing through 15g chopped coriander. To serve, scatter over the leaves of the remaining 15g coriander and 2 tbsp toasted almonds.</li>
+          </ol>
+        </div>
+      </div>
+     </div>
+
+   </section>
+      <div class="copyright py-4 text-center text-white module-extra-small bg-dark" >
+        <div class="container">
+         <small>Kobis &copy;  2018</small>
+        </div>
+      </div>
+
+
+</body>
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+  </body>
+</html>
